@@ -15,11 +15,9 @@ namespace Store.Memory
 
 
 
-        public Book[] GetAllByTitle(string queryString)
+        public Book[] GetAllByTitle(string query)
         {
-            return books
-                .Where(book => book.Title.Contains(queryString))
-                .ToArray();
+            return books.Where(book => book.Title.Contains(query)).ToArray();
         }
     }
 }
