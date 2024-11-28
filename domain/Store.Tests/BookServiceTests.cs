@@ -15,13 +15,13 @@ namespace Store.Tests
         //{
         //    var bookRepositoryStub = new Mock<IBookRepository>();
         //    bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>()))
-        //        .Returns(new[] { new Book(1, "", "", "") });
+        //        .Returns(new[] { new Book(1, "", "", "","",0m) });
 
         //    bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>()))
-        //        .Returns(new[] { new Book(2, "", "", "") });
+        //        .Returns(new[] { new Book(2, "", "", "","",0m) });
 
         //    var bookService = new BookService(bookRepositoryStub.Object);
-            
+
         //    var validIsbn = "ISBN 12345-67890";
 
         //    var actual = bookService.GetAllByQuery(validIsbn);
@@ -36,10 +36,10 @@ namespace Store.Tests
         //{
         //    var bookRepositoryStub = new Mock<IBookRepository>();
         //    bookRepositoryStub.Setup(x => x.GetAllByIsbn(It.IsAny<string>()))
-        //        .Returns(new[] { new Book(1, "", "", "") });
+        //        .Returns(new[] { new Book(1, "", "", "","",0m) });
 
         //    bookRepositoryStub.Setup(x => x.GetAllByTitleOrAuthor(It.IsAny<string>()))
-        //        .Returns(new[] { new Book(2, "", "", "") });
+        //        .Returns(new[] { new Book(2, "", "", "","",0m) });
 
         //    var bookService = new BookService(bookRepositoryStub.Object);
 
@@ -62,12 +62,12 @@ namespace Store.Tests
 
             bookRepository.ResulOfGetAllByIsbn = new[]
             {
-                new Book(idOfIsbnSearch, "","",""),
+                new Book(idOfIsbnSearch, "","","","",0m),
             };
 
             bookRepository.ResulOfGetAllByAuthor = new[]
             {
-                new Book(idOfAuthorSearch, "","",""),
+                new Book(idOfAuthorSearch, "","","","",0m),
             };
 
             var books = bookService.GetAllByQuery("ISBN 12345-6789-0");
@@ -86,12 +86,12 @@ namespace Store.Tests
 
             bookRepository.ResulOfGetAllByIsbn = new[]
             {
-                new Book(idOfIsbnSearch, "","",""),
+                new Book(idOfIsbnSearch, "","","","",0m),
             };
 
             bookRepository.ResulOfGetAllByAuthor = new[]
             {
-                new Book(idOfAuthorSearch, "","",""),
+                new Book(idOfAuthorSearch, "","","","",0m),
             };
 
             var books = bookService.GetAllByQuery("xxxISBN 12345-6789-0");
