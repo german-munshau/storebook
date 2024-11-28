@@ -22,5 +22,10 @@ namespace Store.Memory
         {
             return books.Where(book => book.Title.ToLower().Contains(query.ToLower()) || book.Author.ToLower().Contains(query.ToLower())).ToArray();
         }
+
+        public Book GetById(int id)
+        {
+            return books.Single(book => book.Id == id);
+        }
     }
 }
