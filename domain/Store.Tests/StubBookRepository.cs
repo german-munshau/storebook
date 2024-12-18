@@ -21,5 +21,10 @@ namespace Store.Tests
         {
             return ResulOfGetAllByAuthor;
         }
+
+        public Book GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
